@@ -1,0 +1,367 @@
+/* GLOBAL STYLES */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff; /* White background */
+    color: #000000;      /* Black text */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    color: #000000;      /* Headings in black */
+  }
+  
+  /* SIDEBAR */
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    background: #f9f9f9; /* Light gray/white background for sidebar */
+    padding-top: 20px;
+    border-right: 1px solid #eee; /* Subtle border for a clean look */
+  }
+  
+  .sidebar h1 {
+    text-align: center;
+    color: #000000;      /* Logo or text in black */
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  /* Optional red brackets around the 'Atlas' text in the sidebar */
+  .sidebar h1::before,
+  .sidebar h1::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #FF304D; /* Vibrant red accent color */
+  }
+  
+  .sidebar h1::before {
+    top: -5px;
+    left: -5px;
+    border-right: none;
+    border-bottom: none;
+  }
+  
+  .sidebar h1::after {
+    bottom: -5px;
+    right: -5px;
+    border-left: none;
+    border-top: none;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .sidebar ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #000000; /* Black text for normal state */
+    font-size: 18px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .sidebar ul li:hover a {
+    background: #FF304D; /* Red on hover */
+    color: #ffffff;      /* White text when hovered */
+  }
+  
+  .sidebar ul li a.active {
+    background: #FF304D; /* Active link in red */
+    color: #ffffff;
+  }
+  
+  /* CONTENT AREA */
+  .content {
+    margin-left: 270px;  /* Account for the fixed sidebar width */
+    padding: 40px;
+    min-height: 100vh;
+    background: #ffffff; /* White background for main content */
+  }
+  
+  /* HERO SECTION (Home) */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+  }
+  
+  .hero-text {
+    animation: fadeInLeft 1.5s;
+    max-width: 600px;
+  }
+  
+  .hero-text h1 {
+    font-size: 48px;
+    color: #000000;   /* Black heading */
+    margin-bottom: 10px;
+  }
+  
+  .hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Buttons */
+  .btn {
+    background: #FF304D; /* Red button */
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-size: 18px;
+    border-radius: 4px;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* IMAGE FRAMES (Home) */
+  .hero-img .image-frame {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hero-img .image-frame img {
+    display: block;
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Corner styling for the hero image (optional) */
+  .corner {
+    position: absolute;
+    background-color: #FF304D; /* Red corners */
+  }
+  .corner-top-left {
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 4px;
+  }
+  .corner-top-left::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 30px;
+    background-color: #FF304D;
+  }
+  .corner-top-right {
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 4px;
+  }
+  .corner-top-right::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 30px;
+    background-color: #FF304D;
+  }
+  .corner-bottom-left {
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 4px;
+  }
+  .corner-bottom-left::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    height: 30px;
+    background-color: #FF304D;
+  }
+  .corner-bottom-right {
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 4px;
+  }
+  .corner-bottom-right::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 4px;
+    height: 30px;
+    background-color: #FF304D;
+  }
+  
+  /* ABOUT SECTION */
+  .about h2 {
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  /* Optional bracket corners around "About Me" heading */
+  .about h2::before,
+  .about h2::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #FF304D;
+  }
+  .about h2::before {
+    top: -5px;
+    left: -25px;
+    border-right: none;
+    border-bottom: none;
+  }
+  .about h2::after {
+    bottom: -5px;
+    right: -25px;
+    border-left: none;
+    border-top: none;
+  }
+  
+  .details p {
+    font-size: 16px;
+    margin: 6px 0;
+  }
+  
+  /* EXPERIENCE TIMELINE */
+  .experience h2 {
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .timeline {
+    margin: 50px auto;
+    width: 90%;
+  }
+  .timeline-item {
+    background: #fefefe;
+    border-left: 4px solid #FF304D; /* Red accent line */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    position: relative;
+  }
+  .timeline-item h3 {
+    color: #FF304D; /* Red job title */
+    margin-top: 0;
+  }
+  .timeline-item .date,
+  .timeline-item .client {
+    font-size: 14px;
+    color: #777;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .timeline-item ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  /* CONTACT SECTION */
+  .contact h2 {
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  .contact p {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+  .contact a {
+    color: #FF304D; /* Red links */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  .contact a:hover {
+    color: #cc1f3c; /* Slightly darker red on hover */
+  }
+  
+  /* SKILLS GRID (If you're displaying logos) */
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .skill-item {
+    text-align: center;
+    width: 100px;
+  }
+  .skill-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 5px;
+  }
+  .skill-item p {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  /* BUTTONS FOR CV, HIRE ME, ETC. */
+  .btn-secondary {
+    background: #ffffff;
+    color: #FF304D;
+    border: 2px solid #FF304D;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 10px;
+  }
+  .btn-secondary:hover {
+    background: #FF304D;
+    color: #ffffff;
+    transform: scale(1.05);
+  }
+  
+  /* ANIMATIONS */
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
